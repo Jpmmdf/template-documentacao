@@ -1,0 +1,31 @@
+site_name: Template de Documentação
+theme:
+  name: material
+  language: pt-BR
+nav:
+  - Home: index.md
+  - Design e Arquitetura:
+      - Visão Geral do Sistema: arquitetura/visao-geral.md
+      - Desafios e Soluções: arquitetura/desafios-e-solucoes.md
+      - Design de Baixo Nível: arquitetura/low-level.md
+      - Modelo C4: arquitetura/modelo-c4.md
+
+  
+
+plugins:
+  - search
+  - mermaid2
+
+markdown_extensions:
+  - admonition
+  - toc:
+      permalink: true
+  - codehilite:
+      linenums: true
+  - attr_list
+  - pymdownx.superfences:
+        # make exceptions to highlighting of code:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:mermaid2.fence_mermaid_custom
